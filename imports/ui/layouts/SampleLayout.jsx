@@ -22,12 +22,10 @@ export default class SampleLayout  extends Component{
               <Topbar/>
               <TopBarOption/>
 
-              {/* <h3 style={{padding: '15px', borderBottom: '1px solid #ddd', textAlign: 'center', margin: 0, color: 'red'}}>Select  Net Type</h3> */}
 
             </div>
             <div className='row secondRow'>
-              <div className='three wide column'></div>
-              <div className='thirteen wide column mainBody'>
+              <div className='sixteen wide column mainBody'>
                 {this.props.content}
               </div>
 
