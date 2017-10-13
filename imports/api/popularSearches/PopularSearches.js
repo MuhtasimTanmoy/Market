@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
-class CollectionSchema extends Mongo.Collection{
+class PopularSearchesCollection extends Mongo.Collection{
   insert(doc, callback){
     doc.createdAt = new Date();
     return super.insert(doc, callback);
@@ -17,9 +17,9 @@ class CollectionSchema extends Mongo.Collection{
   }
 }
 
-export const SampleCollection = new CollectionSchema('sampleCollection');
+export const PopularSearches = new PopularSearchesCollection('PopularSearches');
 
-SampleCollection.schema = new SimpleSchema({
-  name: {type: String},
+PopularSearches.schema = new SimpleSchema({
+  text: {type: String},
   createdAt: {type: Date},
 })
