@@ -16,9 +16,14 @@ export default class SampleLayout  extends Component{
       return(
           <div className="ui grid">
             <div className='row firstRow'>
+
+
               <TopBarTitle/>
               <Topbar/>
               <TopBarOption/>
+
+              {/* <h3 style={{padding: '15px', borderBottom: '1px solid #ddd', textAlign: 'center', margin: 0, color: 'red'}}>Select  Net Type</h3> */}
+
             </div>
             <div className='row secondRow'>
               <div className='three wide column'></div>

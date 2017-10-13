@@ -68,9 +68,9 @@ export default class Topbar extends React.Component {
   render() {
     return (
       <div className='seven wide column topBar'>
-        <div className="ui float search">
-          <div className="ui icon input">
-            <input className="prompt" type="text" placeholder="Search products..."></input>
+        <div className="ui search  " style={{marginTop : '5px'}}>
+          <div className="ui icon input" style={{width : '75%',paddingLeft : '20px'}}>
+            <input className="prompt" type="text" placeholder="Search products..." ></input>
             <i className="search icon"></i>
           </div>
           <div className="results"></div>
