@@ -68,6 +68,19 @@ body{
 	font-weight: normal;
 }
 
+.hover {
+	text-align: center;
+}
+
+.hover :hover{
+
+	box-shadow: 0 2px 2px rgba(68, 68, 68, 0.15);	
+	
+	/* box-shadow: 0 0 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22); */
+	
+	
+}
+
 /**************************************** Side Bar Starts **************************************/
 /*
 .sideBar{
