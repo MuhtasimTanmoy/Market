@@ -7,7 +7,7 @@ import Slider from 'react-slick';
 
 
 
-export default class HomePageContent extends Component {
+export default class Test extends Component {
   constructor() {
     super();
   }
@@ -21,7 +21,7 @@ export default class HomePageContent extends Component {
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
-      nextArrow: <SampleNextArrow/>,
+      nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
     };
 
@@ -61,16 +61,18 @@ export default class HomePageContent extends Component {
         </div>
 
         <Slider {...settings}>
-        <div><CardItem/></div>
-        <div><CardItem/></div>
-
-        <div><CardItem/></div>
-
-        <div><CardItem/></div>
-
-        <div><CardItem/></div>
-
-
+       <div className="ui link cards" > <CardItem2/></div>
+       <div className="ui link cards" > <CardItem2/></div>
+       <div className="ui link cards" > <CardItem2/></div>
+       <div className="ui link cards" > <CardItem2/></div>
+       <div className="ui link cards" > <CardItem2/></div>
+       <div className="ui link cards" > <CardItem2/></div>
+       <div className="ui link cards" > <CardItem2/></div>
+       <div className="ui link cards" > <CardItem2/></div>
+       <div className="ui link cards" > <CardItem2/></div>
+       <div className="ui link cards" > <CardItem2/></div>
+       <div className="ui link cards" > <CardItem2/></div>
+       <div className="ui link cards" > <CardItem2/></div>
        
 
       </Slider>

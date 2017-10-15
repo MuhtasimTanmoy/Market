@@ -17,8 +17,7 @@ export default class CardItem extends Component {
                             <a>Friends</a>
                         </div>
                         <div className="description">
-                            {this.props.data.text}
-      </div>
+Hello      </div>
                     </div>
                     <div className="extra content">
                         <span className="right floated">

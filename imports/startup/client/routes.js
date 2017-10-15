@@ -4,6 +4,8 @@ import { mount } from 'react-mounter';
 import HomePage from '/imports/ui/pages/HomePage.jsx'
 import RegisterPage from '/imports/ui/pages/RegisterPage'
 import LoginPage from '/imports/ui/pages/LoginPage'
+import TestPage from '/imports/ui/pages/TestPage.jsx'
+
 
 
 FlowRouter.route('/', {
@@ -13,6 +15,16 @@ FlowRouter.route('/', {
       Meteor.userId() ? mount(HomePage) : mount(LoginPage);
   }
 });
+
+
+FlowRouter.route('/test', {
+  name: 'Test' ,
+  action(params, queryParams) {
+      console.log("test route is being called...");
+      mount(TestPage);
+  }
+});
+
 
 FlowRouter.route('/register', {
   name: 'RegisterPage',

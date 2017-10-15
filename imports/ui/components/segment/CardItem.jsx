@@ -22,11 +22,10 @@ export default class CardItem extends Component {
                             <a>Friends</a>
                         </div>
                         <div className="description">
-                        {this.props.data.text}
+                        Tnamoy
                         </div>
                     </div>
-                    {this.props.data.type}
-                    <p>{this.props.data.description}</p>
+ffff                    <p>czxczxc</p>
                 </div>
 
             </div>
