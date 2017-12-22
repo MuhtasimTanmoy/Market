@@ -4,6 +4,7 @@ import { Meteor } from 'meteor/meteor';
 import CardItem from '/imports/ui/components/segment/CardItem.jsx';
 import CardItem2 from '/imports/ui/components/segment/CardItem2.jsx';
 import Slider from 'react-slick';
+import ItemRow from '../components/common/ItemRow';
 
 
 
@@ -19,6 +20,7 @@ export default class HomePageContent extends Component {
       dots: false,
       infinite: false,
       speed: 500,
+      arrows:true,
       slidesToShow: 4,
       slidesToScroll: 1,
       nextArrow: <SampleNextArrow/>,
@@ -30,7 +32,6 @@ export default class HomePageContent extends Component {
       return (
         <div
           className={className}
-          style={{...style, display: 'block', background: 'red'}}
           onClick={onClick}
         ></div>
       );
@@ -41,7 +42,6 @@ export default class HomePageContent extends Component {
       return (
         <div
           className={className}
-          style={{...style, display: 'block', background: 'green'}}
           onClick={onClick}
         ></div>
       );
@@ -51,7 +51,15 @@ export default class HomePageContent extends Component {
 
 
     return (
+      <div>
+        <div style={{marginLeft:"40px",marginRight:"40px"}}>
+        <ItemRow/>
+        </div>
       <div className='ui' style={{padding:"20px 80px"}}>
+
+
+
+
 
         <Slider {...settings}>
         <div><CardItem/></div>
@@ -75,6 +83,7 @@ export default class HomePageContent extends Component {
 
 
 
+      </div>
       </div>
     )
   }

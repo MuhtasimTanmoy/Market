@@ -27,7 +27,7 @@ body{
 	font-weight: lighter;
 }
 .mainBody{
-	margin-top: 64px !important;
+	margin-top: 96px !important;
 }
 .contentContainer{
 	padding: 14px 14px 14px 10px;
@@ -46,6 +46,15 @@ body{
 	left: 0px;
 
 }
+
+/* .itemRow{
+	background: '#fff';
+	position: fixed !important;
+	z-index: 79;
+	left: 0px;
+	padding-top: 70px;
+
+} */
 .secondRow{
     padding-top: 0px !important;
     padding-bottom: 0px !important;
@@ -75,7 +84,9 @@ body{
 
 .hover :hover{
 
-	box-shadow: 0 2px 2px rgba(68, 68, 68, 0.15);	
+	box-shadow: 0 2px 2px rgba(68, 68, 68, 0.15);
+	text-decoration: underline;
+		
 	
 	/* box-shadow: 0 0 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22); */
 	
@@ -189,6 +200,10 @@ body{
     float: left;
 }
 
+.blackBack{
+	background: #000;
+	color: #2c3d48;
+}
 .cardHover{
 	background: #fff;
 	text-align: center;
@@ -207,4 +222,16 @@ body{
   .cardHover p{
 	font-size: 14px;
 	margin: 0;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+	color:blue;
+  }
+ 
+
+  .notVisible{
+	  display: none
+  }
+  .visible{
+	  display: block
   }

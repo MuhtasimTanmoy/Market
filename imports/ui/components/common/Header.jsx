@@ -130,7 +130,7 @@ class Header extends Component {
 
 		return (
 
-			<div className="ui white large top fixed menu">
+			<div className="ui white large top fixed menu borderless" style={{maxHeight:"60px",boxShadow:"none"}}>
 
 				<div className="ui page dimmer">
 					<div className="content">
