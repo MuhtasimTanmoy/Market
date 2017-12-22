@@ -53,13 +53,6 @@ export default class HomePageContent extends Component {
     return (
       <div className='ui' style={{padding:"20px 80px"}}>
 
-
-        <div className="ui link cards">
-
-        <CardItem2/>
-        
-        </div>
-
         <Slider {...settings}>
         <div><CardItem/></div>
         <div><CardItem/></div>

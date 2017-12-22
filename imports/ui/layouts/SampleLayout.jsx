@@ -15,12 +15,13 @@ export default class SampleLayout  extends Component{
 
       return(
           <div className="ui grid">
-            <div className='row firstRow'>
-
+            <div className='row firstRow' >
 
               <TopBarTitle/>
               <Topbar/>
               <TopBarOption/>
+
+              
 
 
             </div>

@@ -16,16 +16,21 @@ export default class CardItem extends Component {
                         </img>
                     </div> */}
 
+                    {/* <div className="ui medium image" style={{ minHeight: "180px" }}>
+                        <img src="./images/mathew.png" />
+
+                    </div> */}
+
                     <div className="content">
                         <div className="header">Matt Giampietro</div>
                         <div className="meta">
                             <a>Friends</a>
                         </div>
                         <div className="description">
-                        Tnamoy
+                            Tnamoy
                         </div>
                     </div>
-ffff                    <p>czxczxc</p>
+                    ffff                    <p>czxczxc</p>
                 </div>
 
             </div>

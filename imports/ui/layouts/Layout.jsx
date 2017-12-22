@@ -19,8 +19,7 @@ export default class Layout  extends Component{
               <Header/>
             </div>
             <div className='row secondRow'>
-              <div className='three wide column'></div>
-              <div className='thirteen wide column mainBody'>
+              <div className='sixteen wide column mainBody'>
                 {this.props.content}
               </div>
 

@@ -9,9 +9,9 @@ export default class TopBarOption extends React.Component{
           <div className="right floated column"></div>
           <div className="right floated column"></div>
 
-      <div className="right floated column hover" style={{textAlign:'center'}}><h3 >Help</h3></div>
-      <div className="right floated column hover"><h3>Log In</h3></div>
-      <div className="right floated column hover"><h3>Sign Up</h3></div>
+      <div className="right floated column hover" style={{textAlign:'center'}}><h3 >Cart</h3></div>
+      <div className="right floated column hover"><h3>Wish List</h3></div>
+      <div className="right floated column hover"><h3>Sign In</h3></div>
     </div>
 
       </div>

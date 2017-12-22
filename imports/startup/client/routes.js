@@ -3,7 +3,6 @@ import { mount } from 'react-mounter';
 
 import HomePage from '/imports/ui/pages/HomePage.jsx'
 import RegisterPage from '/imports/ui/pages/RegisterPage'
-import LoginPage from '/imports/ui/pages/LoginPage'
 import TestPage from '/imports/ui/pages/TestPage.jsx'
 
 
@@ -12,7 +11,8 @@ FlowRouter.route('/', {
   name: 'Homepage' ,
   action(params, queryParams) {
       console.log("home route is being called...");
-      Meteor.userId() ? mount(HomePage) : mount(LoginPage);
+      //Meteor.userId() ? mount(HomePage) : mount(LoginPage);
+      mount(HomePage);
   }
 });
 
@@ -35,11 +35,3 @@ FlowRouter.route('/register', {
   }
 });
 
-FlowRouter.route('/login', {
-  name: 'LoginPage',
-  action(params, queryParams) {
-      console.log("home route is being called...");
-      // Meteor.userId() ? mount(Dashboard) : mount(Login);
-      mount(LoginPage);
-  }
-});
