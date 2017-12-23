@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
+import SideList from './SidePane';
+
 
 export default class ItemRow extends React.Component {
 
@@ -8,6 +10,7 @@ export default class ItemRow extends React.Component {
         this.state={
             sidePane:"ui segment notVisible",
             sideCarousal:"visible",
+            activeList:""
         };
     }
     componentDidMount() {
@@ -31,11 +34,23 @@ export default class ItemRow extends React.Component {
 
     }
 
-    showSidePane(){
-        console.log("Entered");
+    showPane(){
         this.setState({
-            sidePane:"ui segment visible",
+            sidePane:"ui  visible",
             sideCarousal:"notVisible",
+
+        })
+
+    }
+
+    showActiveMode(event){
+        console.log("Entered");
+        // console.log($(event.target).children("div")[0]);
+        console.log($(event.target)[0].innerText);
+        let active=$(event.target)[0].innerText;
+        active=active.trim();
+        this.setState({
+            activeList:active, 
 
         })
     }
@@ -43,8 +58,9 @@ export default class ItemRow extends React.Component {
     hideSidePane(){
         console.log("out");
         this.setState({
-            sidePane:"ui segment notVisible",
+            sidePane:"ui notVisible",
             sideCarousal:"visible",
+            activeList:""
 
         })
 
@@ -63,29 +79,26 @@ export default class ItemRow extends React.Component {
       
         
         return (
-            <div className="ui grid">
+            <div className="ui grid" onMouseEnter={this.showPane.bind(this)} onMouseLeave={this.hideSidePane.bind(this)} >
                 <div className="three wide  column" style={{background:"#fff",padding:"0",margin:"0"}}>
                     <div className="ui vertical fluid tabular menu">
 
-                    <div onMouseOver={this.showSidePane.bind(this)} onMouseLeave={this.hideSidePane.bind(this)}>
-                       <Item name="Electeonics"/>
+                    <div onMouseEnter={this.showActiveMode.bind(this)} >
+                       <Item name="Electronics"/>
                        </div>
-                       <div onMouseOver={this.showSidePane.bind(this)} onMouseLeave={this.hideSidePane.bind(this)}><Item name="Book"/></div>
-                       <div onMouseOver={this.showSidePane.bind(this)} onMouseLeave={this.hideSidePane.bind(this)}>
-                       <Item name="Electeonics"/>
+                       <div onMouseEnter={this.showActiveMode.bind(this)} ><Item name="Book"/></div>
+                       <div onMouseEnter={this.showActiveMode.bind(this)} >
+                       <Item name="Men's wear"/>
                        </div>
-                       <div onMouseOver={this.showSidePane.bind(this)} onMouseLeave={this.hideSidePane.bind(this)}><Item name="Book"/></div>
-                       <div>
-                       <Item name="Electeonics"/>
+                       <div onMouseEnter={this.showActiveMode.bind(this)} ><Item name="Women's wear"/></div>
+                       <div onMouseEnter={this.showActiveMode.bind(this)} >
+                       <Item name="Mobile"/>
                        </div>
-                       <div onMouseOver={this.showSidePane.bind(this) } onMouseLeave={this.hideSidePane.bind(this)}><Item name="Book"/></div>
-                       <div onMouseOver={this.showSidePane.bind(this)} onMouseLeave={this.hideSidePane.bind(this)}>
-                       <Item name="Electeonics"/>
+                       <div onMouseEnter={this.showActiveMode.bind(this) } ><Item name="Gadget"/></div>
+                       <div onMouseEnter={this.showActiveMode.bind(this)} >
+                       <Item name="Shoe"/>
                        </div>
-                       <div onMouseOver={this.showSidePane.bind(this)} onMouseLeave={this.hideSidePane.bind(this)}><Item name="Book"/></div>
-                       
-                      
-                        
+                       <div onMouseEnter={this.showActiveMode.bind(this)} ><Item name="Custom"/></div>              
                     </div>
                 </div>
                 <div className="thirteen wide stretched column" style={{padding:"0",margin:"0"}}>
@@ -107,8 +120,8 @@ export default class ItemRow extends React.Component {
 
 
 
-      <div className={this.state.sidePane}>
-      Hello
+      <div className={this.state.sidePane} style={{background:"#fff",padding:"10px"}}>
+            <SideList name={this.state.activeList}/>
       </div>
 {/* 
 <div className="ui flowing popup top left transition hidden">
@@ -177,3 +190,5 @@ class Item extends React.Component{
         );
     }
 }
+
+

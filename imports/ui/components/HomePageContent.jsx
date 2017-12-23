@@ -4,7 +4,7 @@ import { Meteor } from 'meteor/meteor';
 import CardItem from '/imports/ui/components/segment/CardItem.jsx';
 import CardItem2 from '/imports/ui/components/segment/CardItem2.jsx';
 import Slider from 'react-slick';
-import ItemRow from '../components/common/ItemRow';
+import ItemRow from '../components/sidePane/ItemRow';
 
 
 
