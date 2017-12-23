@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 export default class SideList extends React.Component{
 
     renderSidePane(){
-        console.log(this.props.name);
-        console.log(this.props.name=="Shoe");
+        // console.log(this.props.name);
         let sidePane="";
         if(this.props.name=="Electronics"){
             sidePane=<div className="ui three column left aligned grid">

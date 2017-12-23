@@ -10,7 +10,7 @@ export default class ItemRow extends React.Component {
         this.state={
             sidePane:"ui segment notVisible",
             sideCarousal:"visible",
-            activeList:""
+            activeList:"",
         };
     }
     componentDidMount() {
@@ -46,14 +46,18 @@ export default class ItemRow extends React.Component {
     showActiveMode(event){
         console.log("Entered");
         // console.log($(event.target).children("div")[0]);
-        console.log($(event.target)[0].innerText);
+        // console.log($(event.target)[0].innerText);
         let active=$(event.target)[0].innerText;
         active=active.trim();
         this.setState({
-            activeList:active, 
+            activeList:active,
+
 
         })
     }
+
+
+    
 
     hideSidePane(){
         console.log("out");
@@ -84,21 +88,21 @@ export default class ItemRow extends React.Component {
                     <div className="ui vertical fluid tabular menu">
 
                     <div onMouseEnter={this.showActiveMode.bind(this)} >
-                       <Item name="Electronics"/>
+                       <Item current={this.state.activeList} name="Electronics"/>
                        </div>
-                       <div onMouseEnter={this.showActiveMode.bind(this)} ><Item name="Book"/></div>
+                       <div onMouseEnter={this.showActiveMode.bind(this)} ><Item current={this.state.activeList} name="Book" /></div>
                        <div onMouseEnter={this.showActiveMode.bind(this)} >
-                       <Item name="Men's wear"/>
+                       <Item current={this.state.activeList} name="Men's wear"/>
                        </div>
-                       <div onMouseEnter={this.showActiveMode.bind(this)} ><Item name="Women's wear"/></div>
+                       <div onMouseEnter={this.showActiveMode.bind(this)} ><Item current={this.state.activeList} name="Women's wear"/></div>
                        <div onMouseEnter={this.showActiveMode.bind(this)} >
-                       <Item name="Mobile"/>
+                       <Item current={this.state.activeList} name="Mobile"/>
                        </div>
-                       <div onMouseEnter={this.showActiveMode.bind(this) } ><Item name="Gadget"/></div>
+                       <div onMouseEnter={this.showActiveMode.bind(this) } ><Item current={this.state.activeList} name="Gadget"/></div>
                        <div onMouseEnter={this.showActiveMode.bind(this)} >
-                       <Item name="Shoe"/>
+                       <Item current={this.state.activeList} name="Shoe"/>
                        </div>
-                       <div onMouseEnter={this.showActiveMode.bind(this)} ><Item name="Custom"/></div>              
+                       <div onMouseEnter={this.showActiveMode.bind(this)} ><Item current={this.state.activeList} name="Custom"/></div>              
                     </div>
                 </div>
                 <div className="thirteen wide stretched column" style={{padding:"0",margin:"0"}}>
@@ -166,22 +170,25 @@ class Item extends React.Component{
         }
     }
 
-    makeActive(){
-        this.setState({
-            name:"item active"
-        })
+    // makeActive(){
+    //     this.setState({
+    //         name:"item active"
+    //     })
 
-    }
+    // }
 
-    makeInActive(){
-        this.setState({
-            name:"item"
-        })
-    }
+    // makeInActive(){
+    //     this.setState({
+    //         name:"item"
+    //     })
+    
+    // } onMouseOver={this.makeActive.bind(this)} onMouseLeave={this.makeInActive.bind(this)}
 
     render(){
+            let itemClass=(this.props.current==this.props.name)?"item active":"item";
+              
         return (
-            <a className={this.state.name} onMouseOver={this.makeActive.bind(this)} onMouseLeave={this.makeInActive.bind(this)} >
+            <a className={itemClass}  >
             <i className="child left floated icon"></i>
             <div className="content">
             {this.props.name}
